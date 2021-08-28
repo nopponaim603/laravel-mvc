@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Product Store</title>
+        <title>View Products | Product Store</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -14,7 +14,7 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                color: #333333;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -62,19 +62,41 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .form-input{
+                margin-bottom: 20px;
+            }
+
+            table{
+                width: 100%;
+            }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    Product Store
-                </div>
 
-                <div class="links">
-                <a href="{{ config('app.url')}}/products/create">Create Products</a>
-                <a href="{{ config('app.url')}}/products">View Products</a>
-                </div>
+            <div class="content">
+                <h1>Here's a list of available products</h1>
+
+                <table>
+                    <thead>
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Count</td>
+                        <td>Price</td>
+                    </thead>
+                
+                    <tbody>
+                        @foreach( $products as $product )
+                            <tr>
+                                <td>{{ $product->name }}</td>
+                                <td class="inner-table">{{ $product->description }}</td>
+                                <td class="inner-table">{{ $product->count }}</td>
+                                <td class="inner-table">{{ $product->price }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </body>

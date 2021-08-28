@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Product Store</title>
+        <title>Create Product | Product Store</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -62,19 +62,42 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .form-input{
+                margin-bottom: 20px;
+            }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    Product Store
-                </div>
 
-                <div class="links">
-                <a href="{{ config('app.url')}}/products/create">Create Products</a>
-                <a href="{{ config('app.url')}}/products">View Products</a>
-                </div>
+            <div class="content">
+                <form method="POST" action="{{ config('app.url')}}/products">
+                    @csrf
+                    <h1> Enter Details to create a product</h1>
+
+                    <div class="form-input">
+                        <label>Name</label>
+                        <input type="text" name="name">
+                    </div>
+
+                    <div class="form-input">
+                        <label>Description</label>
+                        <input type="text" name="description">
+                    </div>
+
+                    <div class="form-input">
+                        <label>Count</label>
+                        <input type="number" name="count">
+                    </div>
+
+                    <div class="form-input">
+                        <label>Price</label>
+                        <input type="number" name="price">
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </body>
