@@ -14,8 +14,13 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+                $table->string('name');
+                $table->text('description');
+                $table->integer('count');
+                $table->integer('price');
+                $table->softDeletes();
+                $table->timestamps();
         });
     }
 
