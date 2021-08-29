@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
+use resoures\views\createproduct;
+
 class ProductController extends Controller
 {
     /**
@@ -14,11 +16,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $message = 'Some message here.'
-        Log::info($message);
         $products = Product::all();
 
-        return View::make('viewproducts', ['products' => $products]);
+        return view('viewproducts', ['products' => $products]);
     }
 
     /**
@@ -28,10 +28,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $message = 'Some message here.'
-        Log::info($message);
         //
-        return View::make('createproduct');
+        return view('createproduct');
     }
 
     /**
@@ -54,7 +52,7 @@ class ProductController extends Controller
 
         $products = Product::all();
 
-        return View::make('viewproducts', ['products' => $products]);
+        return view('viewproducts', ['products' => $products]);
     }
 
     /**
