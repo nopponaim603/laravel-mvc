@@ -73,8 +73,11 @@
         </style>
     </head>
     <body>
+        <div class="links">
+        <a href="{{ config('app.url')}}">Home</a>
+        </div>
         <div class="flex-center position-ref full-height">
-
+        
             <div class="content">
                 <h1>Here's a list of available products</h1>
 
@@ -89,6 +92,7 @@
                     <tbody>
                         @foreach( $products as $product )
                             <tr>
+                            
                                 <td>{{ $product->name }}</td>
                                 <td class="inner-table">{{ $product->description }}</td>
                                 <td class="inner-table">{{ $product->count }}</td>

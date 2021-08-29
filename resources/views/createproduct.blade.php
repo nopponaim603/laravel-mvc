@@ -69,6 +69,9 @@
         </style>
     </head>
     <body>
+        <div class="links">
+        <a href="{{ config('app.url')}}">Home</a>
+        </div>
         <div class="flex-center position-ref full-height">
 
             <div class="content">
