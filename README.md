@@ -33,6 +33,10 @@ When you are done with installation, copy the `.env.example` file to `.env`
 ```
 $ cp .env.example .env
 ```
+or
+```
+$ copy .env.example .env
+```
 
 Generate the application key
 ```
@@ -56,3 +60,6 @@ $ php artisan serve
 
 ## Acknowledgments
 * [Laravel](https://laravel.com) - The excellent documentation explaining how to get started with Laravel and Laravel Passport made it easy to provide a step by step guide for beginners to follow the application.
+
+
+## Call Route
