@@ -17,7 +17,7 @@ What things you need to install the software.
 ### Install
 Clone the git repository on your computer
 ```
-$ git clone https://github.com/neoighodaro-articles/laravel-mvc-demo.git
+$ git clone https://github.com/nopponaim603/laravel-mvc.git
 ```
 
 You can also download the entire repository as a zip file and unpack in on your computer if you do not have git
@@ -44,6 +44,11 @@ $ php artisan key:generate
 ```
 
 Add your database credentials to the necessary `env` fields
+
+Using mysql and Create DB name
+```
+laravel
+```
 
 Migrate the application
 ```
